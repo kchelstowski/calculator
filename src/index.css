@@ -1,0 +1,74 @@
+@font-face{
+  font-family:'digital-clock-font';
+  src: url('fonts/digital-7.ttf');
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.calculator-main-box {
+  background-color: #32373B;
+  max-width: 17rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: minmax(5rem, auto) repeat(5, 3rem);
+  grid-template-columns: repeat(4, 4rem);
+  grid-gap: 5px;
+}
+.result {
+  border-radius: 10px;
+  padding: .50rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  grid-column: 1 / -1;
+  display: flex;
+  background-color: #CBDDC1;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.prev > span {
+  font-family: 'digital-clock-font', monospace;
+  font-size: 1.5rem;
+}
+.curr > span {
+  font-family: 'digital-clock-font', monospace;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.ac-button {
+  grid-column: 1 / 4;
+  background-color: #F7295C;
+  border: 1px solid #F7295C;
+}
+.btn-general {
+  cursor: pointer;
+  outline: none;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 10px;
+}
+.digit-button {
+  background-color: #595C5D;
+  border: 1px solid #595C5D;
+}
+.operation-button {
+  background-color: #64B6AC;
+  border: 1px solid #64B6AC;
+}
+.submit-delete-button {
+  background-color: #F7295C;
+  border: 1px solid #F7295C;
+}
